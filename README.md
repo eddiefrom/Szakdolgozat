@@ -9,6 +9,6 @@
 - Ezután ki kell adni a következő parancsot: *git clone https://github.com/eddiefrom/LearningRoom.git* . 
 - Miután ez megvan, a konzolban belépünk a *LearningRoom* mappába, és kiadjuk az *mvn install* parancsot.
 - A program *.jar* kiterjesztésű indítóikonja elérhető a *LearningRoom\target* mappában.
-- Tanár felhasználó: tanar@gmail.com, 
-- Diák felhasználók: - n_laszlo@gmail.com, 10. évfolyamos
-                     - k_istvan@gmail.com, 8. évfolyamos
+- Tanár felhasználó: tanar@gmail.com. 
+- Diák felhasználók: -- n_laszlo@gmail.com, 10. évfolyamos
+                     -- k_istvan@gmail.com, 8. évfolyamos
