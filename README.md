@@ -10,5 +10,6 @@
 - Miután ez megvan, a konzolban belépünk a *LearningRoom* mappába, és kiadjuk az *mvn install* parancsot.
 - A program *.jar* kiterjesztésű indítóikonja elérhető a *LearningRoom\target* mappában.
 - Tanár felhasználó: tanar@gmail.com. 
-- Diák felhasználók: -- n_laszlo@gmail.com, 10. évfolyamos
-                     -- k_istvan@gmail.com, 8. évfolyamos
+- Diák felhasználók:  n_laszlo@gmail.com, 10. évfolyamos; k_istvan@gmail.com, 8. évfolyamos.
+- Szülő felhasználó: kis_juli@gmail.com; nagy_erzsi@gmail.com.
+- Jelszó mindenhol: alma.
