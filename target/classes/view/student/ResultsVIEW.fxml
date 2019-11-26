@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.student.ResultsController">
+   <children>
+      <AnchorPane prefHeight="83.0" prefWidth="954.0">
+         <children>
+            <Label layoutX="402.0" layoutY="24.0" text="Eredményeim">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="83.0" prefHeight="462.0" prefWidth="876.0">
+         <children>
+            <TabPane layoutX="6.0" prefHeight="462.0" prefWidth="941.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Pontok">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="369.0" prefWidth="863.0">
+                           <children>
+                              <Button layoutX="401.0" layoutY="365.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" AnchorPane.bottomAnchor="25.0" />
+                              <VBox layoutX="83.0" prefHeight="354.0" prefWidth="221.0" spacing="40.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 20;" text="Könnyű feladatok: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="Közepes feladatok: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="Nehéz feladatok: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="Igaz / Hamis: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="Általános: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="304.0" prefHeight="354.0" prefWidth="128.0" spacing="40.0">
+                                 <children>
+                                    <Label fx:id="easyPoints" alignment="CENTER" prefHeight="30.0" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mediumPoints" alignment="CENTER" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="hardPoints" alignment="CENTER" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="trueFalseExercise" alignment="CENTER" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mainExercise" alignment="CENTER" prefHeight="30.0" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="432.0" prefHeight="72.0" prefWidth="151.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 20;" text="Összes pont: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="583.0" prefHeight="354.0" prefWidth="128.0" spacing="45.0">
+                                 <children>
+                                    <Label fx:id="allPoints" alignment="CENTER" prefHeight="30.0" prefWidth="111.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Megoldott feladatsorok - Verseny mód">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="791.0">
+                           <children>
+                              <TableView fx:id="worksheetTable" prefHeight="354.0" prefWidth="941.0">
+                                <columns>
+                                  <TableColumn fx:id="nameColl" prefWidth="223.0" text="Feladat neve" />
+                                  <TableColumn fx:id="diffColl" prefWidth="200.0" text="Nehézség" />
+                                    <TableColumn fx:id="catColl" prefWidth="200.0" text="Kategória" />
+                                    <TableColumn fx:id="typeColl" prefWidth="200.0" text="Típus" />
+                                    <TableColumn fx:id="pointsColl" prefWidth="120.0" text="Pont" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="67.0" layoutY="366.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#openCompetition" prefHeight="30.0" prefWidth="140.0" text="Megnyitás" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="65.0" />
+                              <Button layoutX="653.0" layoutY="366.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="65.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Megoldott feladatsorok - Gyakorló mód">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="351.0" prefWidth="863.0">
+                                 <children>
+                                    <TableView fx:id="worksheetTablePractice" prefHeight="354.0" prefWidth="941.0">
+                                      <columns>
+                                        <TableColumn fx:id="nameCollPractice" prefWidth="223.0" text="Feladat neve" />
+                                        <TableColumn fx:id="diffCollPractice" prefWidth="200.0" text="Nehézség" />
+                                          <TableColumn fx:id="catCollPractice" prefWidth="200.0" text="Kategória" />
+                                          <TableColumn fx:id="typeCollPractice" prefWidth="200.0" text="Tipus" />
+                                          <TableColumn fx:id="pointsCollPractice" prefWidth="120.0" text="Pont" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <Button layoutX="98.0" layoutY="365.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#openPractice" prefHeight="30.0" prefWidth="140.0" text="Megnyitás" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="65.0" />
+                              <Button layoutX="695.0" layoutY="365.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="65.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Statisztika">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="863.0">
+                           <children>
+                              <Button layoutX="401.0" layoutY="366.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" AnchorPane.bottomAnchor="27.0" />
+                              <VBox prefHeight="354.0" prefWidth="235.0" spacing="65.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 20;" text="Gyakorlással töltött idő:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="Versennyel töltött idő: ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="235.0" prefHeight="354.0" prefWidth="101.0" spacing="65.0">
+                                 <children>
+                                    <Label fx:id="allTimePracticeDay" alignment="CENTER" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="allTimeCompetitionDay" alignment="CENTER" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Label">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="350.0" prefHeight="354.0" prefWidth="63.0" spacing="65.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 20;" text="nap">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label style="-fx-font-size: 20;" text="nap">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="446.0" prefHeight="354.0" prefWidth="72.0" spacing="65.0">
+                                 <children>
+                                    <Label fx:id="allTimePracticeHour" prefHeight="30.0" prefWidth="62.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="asd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="allTimeCompetitionHour" prefHeight="30.0" prefWidth="64.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="asd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="518.0" prefHeight="354.0" prefWidth="66.0" spacing="65.0">
+                                 <children>
+                                    <Label prefWidth="76.0" style="-fx-font-size: 20;" text="óra">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="76.0" style="-fx-font-size: 20;" text="óra">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="612.0" prefHeight="354.0" prefWidth="81.0" spacing="65.0">
+                                 <children>
+                                    <Label fx:id="allTimePracticeMinute" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="dasd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="allTimeCompetitionMinute" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="asd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="693.0" prefHeight="354.0" prefWidth="69.0" spacing="65.0">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="45.0" style="-fx-font-size: 20;" text="perc">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="30.0" prefWidth="45.0" style="-fx-font-size: 20;" text="perc">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="801.0" prefHeight="354.0" prefWidth="71.0" spacing="65.0">
+                                 <children>
+                                    <Label fx:id="allTimePracticeSecond" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="asd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="allTimeCompetitionSecond" prefWidth="76.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="asd">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="872.0" prefHeight="354.0" prefWidth="69.0" spacing="65.0">
+                                 <children>
+                                    <Label prefWidth="76.0" style="-fx-font-size: 20;" text="mp">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefWidth="76.0" style="-fx-font-size: 20;" text="mp">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="100.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

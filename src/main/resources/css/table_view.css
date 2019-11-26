@@ -1,0 +1,7 @@
+.table-cell.name-column {
+    -fx-background-color: palegreen;
+}
+
+.table-view .column-header.name-column {
+    -fx-base: palegreen;
+}

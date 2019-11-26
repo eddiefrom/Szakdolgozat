@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.teacher.StudentRankController">
+    <children>
+        <AnchorPane prefHeight="85.0" prefWidth="866.0">
+            <children>
+                <Label layoutX="388.0" layoutY="25.0" text="Rangsor">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="495.0" prefHeight="67.0" prefWidth="866.0">
+            <children>
+                <Button layoutX="363.0" layoutY="19.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="85.0" prefHeight="408.0" prefWidth="860.0">
+            <children>
+                <TabPane accessibleRole="DATE_PICKER" layoutX="7.0" prefHeight="408.0" prefWidth="848.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Abszolút helyezés">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="449.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumber" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="name" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPoints" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Könnyű feladatok">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberEasy" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameEasy" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsEasy" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Közepes feladatok">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberMedium" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameMedium" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsMedium" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Nehéz feladatok">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberHard" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameHard" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsHard" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Általános">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberMain" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameMain" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsMain" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Igaz/Hamis">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberTrueFalse" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameTrueFalse" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsTrueFalse" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Évfolyam">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXListView fx:id="rankNumberClass" prefHeight="370.0" prefWidth="99.0" />
+                                        <JFXListView fx:id="nameClass" layoutX="99.0" prefHeight="370.0" prefWidth="591.0" />
+                                        <JFXListView fx:id="allPointsClass" layoutX="690.0" prefHeight="370.0" prefWidth="158.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="700.0" maxWidth="1254.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1254.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.teacher.ModifyCreateExerciseController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Feladat létrehozás">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <ToolBar layoutY="107.0" prefHeight="529.0" prefWidth="116.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="107.0">
+            <items>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#drawByHandButtonEvent" prefWidth="90.0" text="Rajz" />
+                        <Button mnemonicParsing="false" onAction="#lineButtonEvent" prefWidth="90.0" text="Vonal" />
+                        <Button mnemonicParsing="false" onAction="#drawCircleButtonEvent" prefWidth="90.0" text="Kör" />
+                        <Button mnemonicParsing="false" onAction="#ovalButtonEvent" prefWidth="90.0" text="Ellipszis" />
+                        <Button mnemonicParsing="false" onAction="#squareButtonEvent" prefWidth="90.0" text="Négyzet" />
+                        <Button mnemonicParsing="false" onAction="#rectButtonEvent" prefWidth="90.0" text="Téglalap" />
+                        <Button mnemonicParsing="false" onAction="#textWritingButtonEvent" prefWidth="90.0" text="Szöveg" />
+                        <Button mnemonicParsing="false" onAction="#drawPointButtonEvent" prefWidth="90.0" text="Pont" />
+                    </children>
+                    <padding>
+                        <Insets left="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </items>
+        </ToolBar>
+        <HBox alignment="CENTER" layoutY="515.0" prefHeight="65.0" prefWidth="800.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#createButtonEvent" prefHeight="35.0" prefWidth="150.0" text="Létrehozás" />
+                <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#helpButtonEvent" prefHeight="35.0" prefWidth="150.0" text="Segítség hozzáadás" />
+                <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#deleteCanvas" prefHeight="35.0" prefWidth="150.0" text="Felület törlése" />
+                <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="35.0" prefWidth="150.0" text="Vissza" />
+            </children>
+            <padding>
+                <Insets left="26.0" right="26.0" />
+            </padding>
+        </HBox>
+        <Canvas fx:id="mainCanvas" height="530.0" layoutX="130.0" layoutY="107.0" onMouseDragged="#mouseDragged" onMousePressed="#mousePress" onMouseReleased="#mouseRelease" width="885.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="107.0" />
+        <Canvas fx:id="effectCanvas" height="530.0" layoutX="116.0" layoutY="107.0" onMouseDragged="#mouseDragged" onMousePressed="#mousePress" onMouseReleased="#mouseRelease" width="885.0" />
+        <AnchorPane layoutY="66.0" prefHeight="40.0" prefWidth="1000.0">
+            <children>
+                <HBox alignment="CENTER" layoutX="1.0" layoutY="-5.0" prefHeight="50.0" prefWidth="1000.0" spacing="15.0">
+                    <children>
+                        <Label text="Szín:  " />
+                        <ColorPicker fx:id="fillColor" />
+                        <Label text="Vonal: " />
+                        <ColorPicker fx:id="strokColor" />
+                        <Label text="Méret: " />
+                        <TextField fx:id="penSize" prefHeight="26.0" prefWidth="46.0" />
+                        <CheckBox fx:id="strokePainting" mnemonicParsing="false" text="Keret" />
+                        <CheckBox fx:id="fillPainting" mnemonicParsing="false" text="Kitöltés" />
+                        <Button mnemonicParsing="false" onAction="#rubberButtonEvent" prefHeight="26.0" prefWidth="84.0" text="Radír" />
+                        <Button mnemonicParsing="false" onAction="#updateExercise" text="Feladat feltöltése" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="1001.0" layoutY="107.0" prefHeight="530.0" prefWidth="249.0">
+            <children>
+                <VBox alignment="TOP_RIGHT" prefHeight="278.0" prefWidth="249.0" spacing="30.0">
+                    <children>
+                        <TextField fx:id="nameField" alignment="CENTER" promptText="Feladat neve" />
+                        <TextField fx:id="goodAnswerField" alignment="CENTER" promptText="Helyes válasz" />
+                        <TextField fx:id="exerciseField" alignment="CENTER" promptText="Kategória" />
+                        <TextField fx:id="pointField" alignment="CENTER" promptText="Pont érték" />
+                        <TextField fx:id="timeField" alignment="CENTER" promptText="Időlimit (mp)" />
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" layoutY="278.0" prefHeight="57.0" prefWidth="249.0" spacing="30.0">
+                    <children>
+                        <Label text="Típus: " />
+                        <ChoiceBox fx:id="exerciseTypes" prefWidth="150.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutY="335.0" prefHeight="57.0" prefWidth="249.0" spacing="5.0">
+                    <children>
+                        <Label text="Nehézség:" />
+                        <ChoiceBox fx:id="difficultyLevelChoiceBox" prefWidth="150.0" />
+                    </children>
+                </HBox>
+                <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="392.0" prefHeight="136.0" prefWidth="237.0" textFill="RED" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="1077.0" layoutY="78.0" text="Tulajdonságok" />
+        <Separator layoutX="997.0" layoutY="107.0" orientation="VERTICAL" prefHeight="530.0" prefWidth="0.0" />
+    </children>
+</AnchorPane>

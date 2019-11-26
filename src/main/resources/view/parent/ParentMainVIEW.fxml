@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.parent.ParentMainController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="689.0" prefHeight="79.0" prefWidth="586.0">
+            <children>
+                <Button layoutX="223.0" layoutY="25.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Kijelentkezés" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="223.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="132.0" prefWidth="140.0">
+            <children>
+                <ImageView fx:id="profilPic" fitHeight="132.0" fitWidth="140.0" onMouseClicked="#pictureChooser" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="116.0" prefHeight="132.0" prefWidth="473.0">
+            <children>
+                <Label alignment="CENTER" layoutX="14.0" layoutY="51.0" prefHeight="30.0" prefWidth="105.0" text="Üdvözöllek">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="nameLabel" layoutX="119.0" layoutY="53.0" prefHeight="27.0" prefWidth="184.0" text="Csaba">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="308.0" layoutY="88.0" maxHeight="30.0" maxWidth="118.0" minHeight="30.0" minWidth="118.0" mnemonicParsing="false" onAction="#resultsEvent" prefHeight="30.0" prefWidth="118.0" text="Eredmények" AnchorPane.bottomAnchor="14.0" />
+                <Button layoutX="308.0" layoutY="14.0" maxHeight="30.0" maxWidth="118.0" minHeight="30.0" minWidth="118.0" mnemonicParsing="false" onAction="#rankListButtonEvent" prefHeight="30.0" prefWidth="118.0" text="Rangsor" />
+            <Button layoutX="308.0" layoutY="52.0" maxHeight="30.0" maxWidth="118.0" minHeight="30.0" minWidth="118.0" mnemonicParsing="false" onAction="#teachersEvent" prefHeight="30.0" prefWidth="118.0" text="Tanárok" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="6.0" layoutY="137.0" prefHeight="547.0" prefWidth="532.0">
+            <children>
+                <TableView fx:id="studentTable" prefHeight="547.0" prefWidth="572.0">
+                    <columns>
+                        <TableColumn fx:id="nameColl" prefWidth="359.0" text="Diák neve" />
+                        <TableColumn fx:id="classColl" prefWidth="212.0" text="Évfolyam" />
+                    </columns>
+                </TableView>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="575.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.teacher.StudentInfoController">
+   <children>
+      <AnchorPane prefHeight="84.0" prefWidth="454.0">
+         <children>
+            <Label layoutX="148.0" layoutY="24.0" text="Tanuló adatok">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Separator layoutX="9.0" layoutY="79.0" prefHeight="1.0" prefWidth="436.0" style="-fx-background-color: #4FA16A; -fx-border-color: #4FA16A;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="84.0" prefHeight="419.0" prefWidth="454.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="14.0" prefHeight="419.0" prefWidth="213.0" spacing="40.0" AnchorPane.leftAnchor="14.0">
+               <children>
+                  <Label style="-fx-font-size: 20;" text="Név: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 20;" text="Email: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 20;" text="Szül. idő: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 20;" text="Kor: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 20;" text="Évfolyam: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-font-size: 20;" text="Anyja neve: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets left="30.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="237.0" prefHeight="419.0" prefWidth="213.0" spacing="40.0">
+               <children>
+                  <Label fx:id="nameLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Név: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Email: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bornLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Szül. idő: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ageLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Kor: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="classNumberLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Évfolyam: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="motherNameLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Anyja neve: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="503.0" prefHeight="71.0" prefWidth="454.0">
+         <children>
+            <Button layoutX="28.0" layoutY="20.0" maxHeight="40.0" maxWidth="120.0" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onAction="#resultsButtonEvent" prefHeight="40.0" prefWidth="120.0" text="Eredmények" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="26.0" />
+            <Button layoutX="318.0" layoutY="16.0" maxHeight="40.0" maxWidth="120.0" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="40.0" prefWidth="120.0" text="Vissza" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="26.0" />
+            <Button layoutX="166.0" layoutY="12.0" maxHeight="40.0" maxWidth="120.0" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onAction="#rankButtonEvent" prefHeight="40.0" prefWidth="120.0" text="Ranglista" AnchorPane.bottomAnchor="15.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

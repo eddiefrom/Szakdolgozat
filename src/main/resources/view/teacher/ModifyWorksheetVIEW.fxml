@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="570.0" maxWidth="828.0" minHeight="456.0" minWidth="667.0" prefHeight="570.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.teacher.ModifyWorksheetController">
+    <children>
+        <AnchorPane prefHeight="72.0" prefWidth="828.0">
+            <children>
+                <Label layoutX="315.0" layoutY="21.0" text="Feladatsor módosítása">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="504.0" prefHeight="66.0" prefWidth="828.0">
+            <children>
+                <Button layoutX="344.0" layoutY="18.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="30.0" prefWidth="140.0" text="Vissza" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+            <Button layoutX="29.0" layoutY="19.0" maxHeight="30.0" maxWidth="140.0" minHeight="30.0" minWidth="140.0" mnemonicParsing="false" onAction="#saveModif" prefHeight="30.0" prefWidth="140.0" text="Mentés" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="30.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="72.0" prefHeight="314.0" prefWidth="713.0">
+            <children>
+                <TableView fx:id="tableView" prefHeight="314.0" prefWidth="713.0" AnchorPane.leftAnchor="10.0">
+                    <columns>
+                        <TableColumn fx:id="nameCell" prefWidth="188.8000854253769" text="Feladat neve" />
+                        <TableColumn fx:id="diffCell" prefWidth="136.800048828125" text="Nehézség" />
+                        <TableColumn fx:id="pointCell" prefWidth="83.199951171875" text="Pont" />
+                        <TableColumn fx:id="categoryCell" prefWidth="164.80001831054688" text="Kategória" />
+                  <TableColumn fx:id="typeCell" prefWidth="137.0" text="Típus" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="725.0" layoutY="75.0" prefHeight="314.0" prefWidth="96.0">
+            <children>
+                <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="21.0" maxHeight="46.0" maxWidth="46.0" minHeight="46.0" minWidth="46.0" mnemonicParsing="false" onAction="#addExerciseButtonEvent" prefHeight="46.0" prefWidth="46.0" AnchorPane.topAnchor="40.0" />
+                <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="181.0" maxHeight="46.0" maxWidth="46.0" minHeight="46.0" minWidth="46.0" mnemonicParsing="false" onAction="#deleteExerciseButtonEvent" prefHeight="46.0" prefWidth="46.0" AnchorPane.bottomAnchor="40.0" />
+                <Button fx:id="modifyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="134.0" maxHeight="46.0" maxWidth="46.0" minHeight="46.0" minWidth="46.0" mnemonicParsing="false" onAction="#modifyExerciseButtonEvent" prefHeight="46.0" prefWidth="46.0" AnchorPane.bottomAnchor="133.99999999999997" />
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutY="389.0" prefHeight="118.0" prefWidth="828.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="38.0" prefWidth="699.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="134.0" text="Feladatsor neve: " />
+                  <TextField fx:id="worksheetName" />
+                  <Label text="Évfolyam: " />
+                  <TextField fx:id="classNumber" />
+               </children>
+            </HBox>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="59.0" prefHeight="53.0" prefWidth="575.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
